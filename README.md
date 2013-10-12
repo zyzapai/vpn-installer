@@ -3,6 +3,7 @@
 ###安装
 ```
 yum -y install git
+git clone https://github.com/zyzapai/vpn-installer.git
 cd vpn-installer
 sh centos6_32_install.sh
 ```
