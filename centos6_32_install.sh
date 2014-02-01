@@ -12,13 +12,13 @@ function installVPN(){
 	
 	arch=`uname -m`
 	
+	yum -y install wget make libpcap iptables gcc-c++ logrotate tar cpio perl pam tcp_wrappers
+
 	wget http://www.hi-vps.com/downloads/dkms-2.0.17.5-1.noarch.rpm
 	wget http://www.hi-vps.com/downloads/kernel_ppp_mppe-1.0.2-3dkms.noarch.rpm
 	wget http://www.hi-vps.com/downloads/pptpd-1.3.4-2.el6.$arch.rpm
 	wget http://www.hi-vps.com/downloads/ppp-2.4.5-17.0.rhel6.$arch.rpm
 
-
-	yum -y install make libpcap iptables gcc-c++ logrotate tar cpio perl pam tcp_wrappers
 	rpm -ivh dkms-2.0.17.5-1.noarch.rpm
 	rpm -ivh kernel_ppp_mppe-1.0.2-3dkms.noarch.rpm
 	rpm -qa kernel_ppp_mppe
